@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@val('name')</title>
+    @public_css('/resou/lib/bootstrap/css/bootstrap.min.css')
+    @css('main.css')
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<header class="head">
+
+    <div class="header">
+
+        <div class="logo"  data-toggle="modal" data-target=".confirm_quit">
+            <span class="glyphicon glyphicon-menu-left"></span>
+            <span class="title_name">返回</span>
+        </div>
+
+        <!--nav-->
+        @load('/public/nav.html')
+        <!--./header-->
+    </div>
+</header>
+
+
+<section class="main">
+
+    <div class="diy">
+
+        <div class="diy_name form-inline">
+            <div class="form-group">
+                <label>工作区名称</label>
+                <input type="text" class="form-control" placeholder="请输入工作区名称哦">
+            </div>
+        </div>
+
+        <div class="diy_design">
+            <ul id="diy_design_field">
+
+                <li class="diy_design_field_prompt"><span>请把右边字段类型拖拽到左边</span></li>
+
+            </ul>
+        </div>
+
+        <div class="diy_design_bnt">
+            <button type="button" class="btn btn-info">取消</button>
+            <button type="button" class="btn btn-success">提交</button>
+        </div>
+
+        <!--./diy-->
+    </div>
+
+
+    <!--字段区-->
+    <div class="field">
+        <ul class="field_ul" id="field_list"></ul>
+    </div>
+
+</section>
+
+
+<div class="modal fade confirm_quit">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">是否返回?</h4>
+            </div>
+            <div class="modal-body">
+                <p>返回?目前设计的数据业务即可清楚..</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary confirm_jump">确定返回</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+</body>
+</html>
+<script data-main="/resou/js/main.js" data-model="design" src="/resou/js/require.js"></script>

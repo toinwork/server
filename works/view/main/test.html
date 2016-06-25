@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>api调试</title>
+    @public_css('resou/lib/materialize/css/materialize.min.css')
+    <style>
+        *{ margin: 0; padding: 0;}
+        .main{ margin: 100px; }
+        .setInfo{width: 500px; height: 200px; padding: 10px; border:silver 1px double;}
+
+        /*.main div.lef*/
+    </style>
+</head>
+<body>
+    <div class="main">
+
+        <div class="left">
+            <p>待加密数据</p>
+            <textarea class="setInfo setData "></textarea>
+            <p> <button class="setEnc">加密</button></p>
+        </div>
+
+        <div class="right">
+            <p>加密数据</p>
+            <textarea class="setInfo getData"></textarea>
+        </div>
+
+    </div>
+
+
+
+</body>
+</html>
+<script data-main="/resou/js/main.js" data-model="test" src="/resou/js/require.js"></script>
